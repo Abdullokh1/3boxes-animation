@@ -7,9 +7,67 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #2B2B2B;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.content{
+  width: 250px;
+  perspective: 1000px;
+}
+.box{
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: transform 1.5s ease; 
+  transition-timing-function: ease;
+}
+.bx{
+  text-align: center;
+  color: #767676;
+  font-size: 120px;
+  line-height: 250px;
 
+}
+.items{
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  text-align: center;
+}
+.bg-color{
+  background-color: red;
+}
+.front{
+  transform: translate3d(0,0, 125px);
+}
+.left{
+  transform: translate3d(-125px, 0, 0) rotateY(90deg);
+}
+.top{
+  transform: translate3d(0,125px, 0) rotateX(90deg);
+}
+.bottom{
+  transform: translate3d(0, -125px, 0) rotateX(90deg);
+}
+.right{
+  transform: translate3d(125px,0,0) rotateY(-90deg);
+}
+.back{
+  transform: translate3d(0,0,-125px) rotateX(180deg);
+}
+.content:hover .box{
+  transform: rotateX(180deg) rotateY(360deg);
+}
+.content:not(:last-child){
+  margin-right: 40px;
+}
+.bg-color-twitter{
+  background-color: #0184BC;
+}
+.bg-color-facebook{
+  background-color: #3A5898;
+}
